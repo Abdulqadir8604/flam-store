@@ -47,7 +47,7 @@ const Filter: React.FC<FilterProps> = (
 
     return (
         <div className={"mb-8"}>
-            <h3 className={"text-lg font-semibold"}>
+            <h3 className={"text-lg font-semibold text-white"}>
                 {name}
             </h3>
             <br />
@@ -58,8 +58,8 @@ const Filter: React.FC<FilterProps> = (
                             key={item.id}
                             onClick={() => onClick(item.id)}
                             className={cn(
-                                "rounded-md text-sm text-gray-600 p-2 bg-white border border-gray-300 gap-x-2",
-                                selectedValue === item.id && "bg-gray-100 border-gray-400 text-white"
+                                "rounded-md text-sm p-2 bg-gray-900 border border-gray-300 gap-x-2 text-black",
+                                selectedValue === item.id && "bg-gray-700 border-gray-400 text-white"
                             )}
                         >
                             {item.name}

@@ -34,11 +34,11 @@ const MobileFilters: React.FC<MobileFiltersProps> = (
             <Dialog open={open} as={"div"} onClose={onClose} className={"relative z-40 lg:hidden"}>
                 <div className={"fixed inset-0 bg-black bg-opacity-25"} />
                 <div className={"fixed inset-0 z-40 flex"}>
-                    <Dialog.Panel className={"relative bg-white flex flex-col w-full max-w-sm p-4"}>
+                    <Dialog.Panel className={"relative bg-gray-900 flex flex-col w-full max-w-sm p-4"}>
                         <div className={"flex items-center justify-end px-4"}>
                             <IconButton icon={<X size={15} />} onClick={onClose} />
                         </div>
-                        <Dialog.Title className={"font-bold text-4xl"}>
+                        <Dialog.Title className={"font-bold text-white text-4xl"}>
                             Filters
                         </Dialog.Title>
                         <hr className={"my-4"} />

@@ -4,6 +4,7 @@ export interface ButtonProps
     extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 }
 
+// eslint-disable-next-line react/display-name
 const Button = forwardRef<HTMLButtonElement, ButtonProps>(({
                                                                className,
                                                                children,
@@ -23,16 +24,17 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(({
             border 
             border-transparent 
             transition 
-            text-sm 
+            text-sm
+            text-white 
             font-medium 
             rounded-md 
             shadow-sm 
             bg-gray-900 
-            hover:bg-gray-700 
+            hover:bg-gray-800 
             focus:outline-none 
             focus:ring-2 
             focus:ring-offset-2 
-            focus:ring-gray-500 
+            focus:ring-gray-200 
             ${className}
             `}
             disabled={disabled}
