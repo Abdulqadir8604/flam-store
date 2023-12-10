@@ -25,11 +25,9 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(({
             border-transparent 
             transition 
             text-sm
-            text-white 
             font-medium 
             rounded-md 
             shadow-sm 
-            bg-gray-900 
             hover:bg-gray-800 
             focus:outline-none 
             focus:ring-2 

@@ -47,10 +47,11 @@ const Filter: React.FC<FilterProps> = (
 
     return (
         <div className={"mb-8"}>
-            <h3 className={"text-lg font-semibold"}>
+            <h3 className={"text-lg font-semibold lg:text-gray-900 text-white"}>
                 {name}
             </h3>
             <br />
+            <hr className={"my-4"} />
             <div className={"flex flex-wrap gap-2"}>
                 {
                     data.map((item) => (
