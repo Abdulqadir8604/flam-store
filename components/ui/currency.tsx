@@ -15,7 +15,7 @@ const Currency = (
         setIsMounted(true)
     }, [])
     return (
-        <div className={"text-lg font-semibold"}>
+        <div className={"text-xl font-semibold"}>
             {formatter.format(Number(value))}
         </div>
     )

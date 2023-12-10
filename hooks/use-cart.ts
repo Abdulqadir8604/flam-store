@@ -9,6 +9,7 @@ interface CartStore {
     addItem: (data: Product) => void;
     removeItem: (id: string) => void;
     removeAll: () => void;
+    updateQuantity: (id: string, quantity: number) => void;
 }
 
 const useCart = create(
@@ -22,7 +23,7 @@ const useCart = create(
                 return toast('Item already in cart.');
             }
 
-            set({items: [...get().items, data]});
+            set({items: [...get().items, {...data, quantity: 1}]});
             toast.success('Item added to cart.');
         },
         removeItem: (id: string) => {
@@ -30,6 +31,13 @@ const useCart = create(
             toast.success('Item removed from cart.');
         },
         removeAll: () => set({items: []}),
+        updateQuantity: (id: string, quantity: number) => {
+            set((state) => ({
+                items: state.items.map((item) =>
+                    item.id === id ? {...item, quantity} : item
+                ),
+            }));
+        },
     }), {
         name: 'cart-storage',
         storage: createJSONStorage(() => localStorage)

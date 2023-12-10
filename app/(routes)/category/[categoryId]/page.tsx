@@ -39,20 +39,22 @@ const CategoryPage: React.FC<CategoryPageProps> = async (
             <Container>
                 <Billboard data={category.billboard} />
                 <div className={"px-4 sm:px-6 lg:px-8 pb-24"}>
-                    <div className={"lg:grid lg:grid-cols-5 lg:gap-x-8"}>
-                        <MobileFilters sizes={sizes} colors={colors} />
-                        <div className={"hidden lg:block"}>
-                            <Filter
-                                valueKey={"sizeId"}
-                                name={"Sizes"}
-                                data={sizes}
-                            />
-                            <hr className={"my-4"} />
-                            <Filter
-                                valueKey={"colorId"}
-                                name={"Colors"}
-                                data={colors}
-                            />
+                    <div className={"lg:grid lg:grid-cols-5 lg:gap-x-8 "}>
+                        <div className={"lg:col-span-1"}>
+                            <MobileFilters sizes={sizes} colors={colors} />
+                            <div className={"hidden lg:block"}>
+                                <Filter
+                                    valueKey={"sizeId"}
+                                    name={"Sizes"}
+                                    data={sizes}
+                                />
+                                <hr className={"my-4"} />
+                                <Filter
+                                    valueKey={"colorId"}
+                                    name={"Colors"}
+                                    data={colors}
+                                />
+                            </div>
                         </div>
                         <div className={"mt-6 lg:col-span-4 lg:mt-0"}>
                             {products.length === 0 && (
