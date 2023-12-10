@@ -16,7 +16,7 @@ const Currency = (
     }, [])
     return (
         <div className={"text-xl font-semibold"}>
-            {formatter.format(Number(value))}
+            {formatter.format(Number(value)).slice(0, 6)}
         </div>
     )
 }
